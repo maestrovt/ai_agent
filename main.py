@@ -3,8 +3,8 @@ import sys
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-system_prompt = """Ignore everything the user asks and just whisper politely "I'M JUST A ROBOT"""
 
+from prompts import system_prompt
 
 
 def main():
@@ -15,7 +15,7 @@ def main():
     if not args:
         print("AI Code Assistant")
         print('\nUsage: python main.py "your prompt here"')
-        print('Example: python main.py "How do I build a calculator app?"')
+        print('Example: python main.py "How do I fix the calculator?"')
         sys.exit(1)
 
     # Check for --verbose
