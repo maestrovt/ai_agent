@@ -23,8 +23,8 @@ def write_file(working_directory, file_path, content):
     except Exception as e:
         return f"Error: writing to file: {e}"
 
-schema_write_file_content = types.FunctionDeclaration(
-    name="write_file_content",
+schema_write_file = types.FunctionDeclaration(
+    name="write_file",
     description="Overwrite contents of file with content argument",
     parameters=types.Schema(
         type=types.Type.OBJECT,
